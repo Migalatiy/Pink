@@ -1,0 +1,11 @@
+mixin footer
+    footer.footer
+        .container
+            .footer__logo
+                a.footer__logo_link(href="/", title="На главную")
+            ul.footer__social-icons
+                each item, index in ['Twitter', 'Facebook', 'Youtube']
+                    li: a(href="#")
+                        img(src="img/icon-" + (index + 1) + ".png", alt= item)
+            .footer__copyright Разработано
+                //- .footer__copyright_text Разработано

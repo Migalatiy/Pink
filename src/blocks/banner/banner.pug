@@ -1,0 +1,12 @@
+mixin banner
+    section.banner
+        .container
+            .banner__bg
+            .banner__content
+                h2.banner__title.h2 Взгляните на жизнь иначе!
+                a.banner__btn.btn.btn_bordered(href="#") Скачать приложение
+                ul.banner__platforms
+                    each item, index in ['Apple Store', 'Google Play', 'Microsoft Store']
+                        li: a(href="#", target="_blank", rel="nofollow")
+                            img(src="img/platform-" + (index + 1) + ".png", alt= item)
+                .banner__description Доступно для IPhone, IPad, Andriod, Windows Phone, OS X, Windows 8            

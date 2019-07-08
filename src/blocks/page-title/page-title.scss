@@ -1,0 +1,25 @@
+.page-title{
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    height: 390px;
+    font-weight: 400;
+    margin: 0;
+    padding-top: 113px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    @media (max-width: 700px) {
+        height: 440px;
+        background-image: url(../img/bg_banner_tablet.jpg) !important;
+    }
+
+    @media (max-width: 550px) {
+        height: 230px;
+        font-size: 24px;
+        padding-top: 64px;
+    }
+}

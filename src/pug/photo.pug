@@ -1,0 +1,11 @@
+extends main/page_default
+
+block head
+    title Photo
+
+block content
+    +page-title("Фотографии пользователей")
+    .page-content
+        .container
+            p.page-content__description Взгляните на фотографии, которые выкладывают пользователи! <br> Видите, как не хватает ваших?
+    +photo-panorama

@@ -1,0 +1,15 @@
+mixin advantages-list
+    section.advantages-list
+        .container
+            h2.advantages-list__title.h2 Устали от серости мегаполиса?<br>Нам есть, что вам предложить!
+            ul.advantages-list__list
+                +advantages-list__item('phone-1.png', 'Поднимает настроение', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quasi sint asperiores architecto iure maxime.')
+                +advantages-list__item('phone-1.png', 'Поднимает настроение', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quasi sint asperiores architecto iure maxime.')
+                +advantages-list__item('phone-1.png', 'Поднимает настроение', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quasi sint asperiores architecto iure maxime.')
+
+mixin advantages-list__item(img, title, text)
+    li.advantages-list__item
+        img(src="img/" + img, alt= title)
+        h4= title
+        div= text
+

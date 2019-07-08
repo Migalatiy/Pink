@@ -1,0 +1,34 @@
+mixin form-story
+    form.form.form_story(action="#", method="#")
+        fieldset.form__fieldset.form__fieldset_noborder.form__fieldset_half
+            legend Ваше ФИО
+            each formItem in [["surname", "Фамилия", "Укажите Фамилию"], ["name", "Имя", "Введите Ваше имя"], ["secondname", "Отчество", "Введите Ваше Отчество"]]
+                .form__item
+                    label(for="input-" + formItem[0])= formItem[1]
+                    input(id="input-" + formItem[0], type="text", name= formItem[0], placeholder= formItem[2])
+        fieldset.form__fieldset.form__fieldset_half.form__fieldset_app
+            legend С каким приложением Вы путешествовали?
+            each radio, index in [["ios", "Pink для iOS"], ["android", "Pink для Android"], ["wp", "Windows Phone"]]
+                .form__item.form__item_radio
+                    input(type="radio", name="travelApp", value= radio[0], id="travelApp" + (index + 1))
+                    label(for="travelApp" + (index + 1))= radio[1]
+        fieldset.form__fieldset.form__fieldset_contact
+            legend Контактная информация
+            .form__item.form__item_phone
+                input#input-phone(type="tel", name="phone", placeholder="+7 XXX XXX XX XX")
+                label(for="input-phone") Номер телефона
+            .form__item.form__item_email
+                input#input-email(type="email", name="email", placeholder="Введите почту")
+                label(for="input-email") Адрес почты
+        fieldset.form__fieldset.form__fieldset_checkbox
+            legend Ваши безбашенные достижения в путешествии
+            each checkbox, index in [["Сделал селфи с акулой"], ["Видел Чака Норриса"], ["Удержал башню"], ["Обгорел на пляже"], ["Накупил сувениров"], ["Разгромил отель"]]
+                .form__item.form__item_checkbox
+                    input(type="checkbox", name="checkbox-" + (index + 1), id="selfy-" + (index + 1), value="selfy-" + (index + 1))
+                    label(for="selfy-" + (index + 1))= checkbox[0]
+        fieldset.form__fieldset
+            legend Опишите Ваши эмоции
+            .form__item.form__item_textarea
+                textarea#emotions(name="emotions", cols="95", rows="5") Можно прям в красках, не стесняясь в выражениях
+        .form__actions
+            input(type="submit", value="Отправить форму")

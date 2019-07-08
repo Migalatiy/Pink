@@ -1,0 +1,10 @@
+mixin header
+    header.header
+        .container
+            a.header__logo(href="/", title="На главную")
+                img(src="img/pink-logo.png", alt="Логотип PINK", width="147", height="40")
+            button.header__burger(type="button")
+            nav.header__menu
+                ul
+                    each item in ["Главная", "Фотографии", "Конкурс", "IT Study"]
+                        li: a(href="#")= item

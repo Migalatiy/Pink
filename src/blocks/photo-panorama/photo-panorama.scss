@@ -1,0 +1,21 @@
+.photo__panorama{
+    
+    photo__panorama_img{
+        width: 100%;
+        position: relative;
+    }
+}
+
+.photo__panorama_inside-block{
+    position: absolute;
+    width: 140px;
+    height: 36px;
+    background-color: #d22856;
+
+    p{
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 12px;
+    }
+}
