@@ -78,60 +78,23 @@
             }
         }
     }
-    // .form__fieldset_checkbox {
-        
-    //     .form__item_checkbox {
-    //         display: inline-block;
-    //         width: calc(33.33% - 60px);
-    //         margin-left: 40px;
-            
-    //         &:nth-child(3n-1) {
-    //             margin-left: 0;
-    //         }
-    //         input {
-    //             display: none;
-    //         }
-
-    //         label {
-    //             display: block;
-    //             font-size: 18px;
-    //             color: $c_darkblue;
-    //             position: relative;
-    //             cursor: pointer;
-    //             min-height: 39px;
-    //             line-height: 39px;
-    //             padding-left: 61px;
-    //             &::before {
-    //                 content: "";
-    //                 display: block;
-    //                 width: 39px;
-    //                 height: 39px;
-    //                 border: 2px solid #e5e5e5;
-    //                 border-radius: 1px;
-    //                 position: absolute;
-    //                 left: 0;
-    //                 top: 0;
-    //             }
-    //         }
-    //     }
-    // }
-
     .form__fieldset_checkbox {
-        display: inline-block;
-        .form__item {
+        padding-top: 52px;
+        padding-bottom: 55px;
+        .form__item_checkbox {
             display: inline-block;
-            width: 31%;
+            width: calc(33.33% - 27px);
             margin-left: 40px;
+            margin-bottom: 44px;
             &:nth-child(3n-1) {
                 margin-left: 0;
             }
             input {
                 display: none;
-                width: 100%;
             }
 
             label {
-                display: inline-block;
+                display: block;
                 font-size: 18px;
                 color: $c_darkblue;
                 position: relative;
@@ -139,6 +102,7 @@
                 min-height: 39px;
                 line-height: 39px;
                 padding-left: 61px;
+    
                 &::before {
                     content: "";
                     display: block;
@@ -153,6 +117,7 @@
             }
         }
     }
+
 
     @media (max-width: 830px) {
         .form__fieldset_half {
